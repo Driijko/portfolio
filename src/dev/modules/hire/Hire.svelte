@@ -62,7 +62,7 @@
     padding: 1.5em;
   }
   .background {
-    background-image: url("./images/hire/pic0.webp");
+    background-image: url("../hire/pic0.webp");
     background-size: 200%;
     animation: background-shift 30s linear infinite;
     left: 0;
