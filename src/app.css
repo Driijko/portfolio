@@ -1,80 +1,383 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* MEYER-WEB RESET SHEET ////////////////////////////////////////////////// */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-a:hover {
-  color: #535bf2;
-}
-
 body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+dialog {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  left: initial;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* INTERFACE RESET //////////////////////// */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+a:focus, button:focus, input:focus {
+  outline: none;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+input {
+  font-family: inherit;
+}
+
+/* GENERAL ////////////////////////////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: none;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+  scroll-behavior: smooth; 
+  overscroll-behavior: contain;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+p a {
+  text-decoration: underline;
+  padding: 0 0.3rem;
+}
+
+a, button, label, input {
+  cursor: pointer;
+}
+
+/* This is to make these elements at least
+the minimum recommended size on mobile. 
+Recommended interface size is 40px - 70px, 
+with 50-60 being ideal. */
+a, button, input {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+i {
+  font-style: italic;
+}
+
+em {
+  font-weight: bold;
+}
+
+code {
+  font-family: "Courier";
+}
+
+/* PREVENT OVERSIZED IMAGES */
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+svg {
+  width: 1rem;
+}
+
+/* CSS TOOLS ///////////////////////////////////////////////////////////////// */
+.regular-scroll {
+  height: var(--viewport-height);
+  overflow-y: scroll;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+.regular-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hidden-submit {
+  visibility: hidden;
+  position: absolute;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-gap {
+  gap: 0.3rem;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.page {
+  transition: opacity var(--page-exit-duration) ease-out;
+}
+
+/* UARR /////////////////////////// */
+.uarr1 {
+  aspect-ratio: var(--uarr1-aspect-ratio);
+  width: var(--uarr1-width);
+  height: var(--uarr1-height);
+}
+.uarr2 {
+  aspect-ratio: var(--uarr2-aspect-ratio);
+  width: var(--uarr2-width);
+  height: var(--uarr-height);
+}
+
+/* COVERING MODAL //////////////// */
+.covering-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.covering-modal .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.covering-modal .container {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.covering-modal section {
+  pointer-events: initial;
+  position: relative;
+}
+
+.covering-modal .modal-closer-button {
+  padding: 0.1rem 0.3rem;
+  line-height: 0;
+  border: 1px solid black;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.covering-modal .modal-closer-button svg {
+  width: 1rem;
+}
+
+@media only screen and (orientation: landscape) {
+  .portrait {
+    display: none;
   }
-  a:hover {
-    color: #747bff;
+
+  .cruncher {
+    height: var(--viewport-height);
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media only screen and (orientation: portrait) {
+  .landscape {
+    display: none;
   }
+
+
+}
+
+/* FONT-SIZE AND FAMILY /////////////////////////////////////////////////////// */
+html {
+  font-size: 5vw;
+  font-family: "Baloo 2", sans-serif;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(13.86px + 0.67vw);
+  }
+}
+
+/* COLORS //////////////////////////////////////////////////////////////////// */
+:root {
+  --color1: hsl(220, 100%, 10%);
+  --color1-1: hsl(220, 100%, 20%);
+  --color1-2: hsl(220, 100%, 70%);
+  --color1-3: hsl(220, 100%, 5%);
+  --color1-4: hsl(220, 100%, 50%);
+  --color1-5: hsl(220, 100%, 65%);
+  --color2: hsl(50, 100%, 80%);
+  --color2-1: hsl(50, 100%, 90%);
+  --color2-2: hsl(50, 100%, 8%);
+  --color2-3: hsl(50, 100%, 60%);
+  --color2-4: hsla(50, 100%, 80%, 0.95);
+  --color2-5: hsla(50, 100%, 80%, 0.3);
+  --color3: hsl(0, 100%, 50%);
+  --color3-1: hsl(0, 100%, 35%);
+  --color3-2: hsl(0, 100%, 50%, 0.5);
+  --color3-3: hsl(0, 100%, 70%);
+  color: var(--color1);
+  background-color: var(--color2);
+}
+
+svg:not(.avoid-auto-fill) path {
+  fill: currentColor;
+}
+
+dialog {
+  color: var(--color1);
+}
+
+/* INTERFACE //////////////////////////////////////////////////////// */
+.interface-style1 {
+  transition-property: background-color, transform, outline;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  outline: 0.3rem solid transparent;
+  background-color: hsla(0, 100%, 50%, 0.5);
+  border: 0.1rem solid var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interface-style1:hover, .interface-style1:focus {
+  background-color: var(--color3-1);
+  transform: scale(1.3);
+  outline: 0.3rem solid var(--color3-1);
+}
+
+.interface-style2 {
+  border-radius: 50% 50% 0 0;
+}
+
+.interface-style3 {
+
+}
+
+.interface-style5 {
+  background-color: var(--color1-2);
+  color: var(--color2);
+}
+
+.interface-style6 {
+  border: 0.2rem solid var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--color2);
+  transition: background-color 0.5s ease-out;
+}
+
+.interface-style6:hover, .interface-style6:focus {
+  background-color: var(--color3);
+}
+
+@media (hover:hover) {
+  .interface-style2:hover, .interface-style2:focus {
+    background-color: var(--color2);
+    color: var(--color1);
+    transform: scale(1.5) translateY(-0.31rem);
+  }
+
+  .interface-style3:hover, .interface-style3:focus {
+    color: var(--color3);
+  }
+
+  .interface-style4:hover, .interface-style4:focus {
+    background-color: var(--color2);
+    color: var(--color1);
+  }
+
+  .interface-style5:hover, .interface-style5:focus {
+    color: var(--color1-2);
+    background-color: var(--color1-1);
+  }
+  .interface-style7:hover, .interface-style7:focus {
+    color: var(--color2);
+    background-color: var(--color1);
+  }
+}
+
+/* ANIMATIONS /////////////////////////////////////////////////// */
+@keyframes fade-in {from {opacity: 0;} to {opacity:1;}}
+@keyframes fade-out {from {opacity: 1;} to {opacity:0;}}
+@keyframes rotate1 {from {transform: rotate(0);} to{transform: rotate(360deg)}}
+@keyframes scale1 {from{transform: scale(0);}to{transform:scale(1);}}
+@keyframes scale2 {from{transform: scale(1);}to{transform:scale(0);}}
+@keyframes background-shift {
+  0% {background-position: 0% 0%; opacity: 0;}
+  10% {background-position: 10% 10%; opacity: 0.5;}
+  50% {background-position: 50% 50%; opacity: 1;}
+  90% {background-position: 90% 90%; opacity: 0.5;}
+  100% {background-position: 100% 100%; opacity: 0;}
 }
