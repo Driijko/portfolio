@@ -1,7 +1,7 @@
 <!-- SCRIPTS /////////////////////////////////////////////////////// -->
 <script>
   // IMPORT COMPONENTS ---------------------------------------------
-  import HomeHeader from "./HomeHeader.svelte";import HomeSection00 from "./HomeSection00.svelte";
+  import HomeHeader from "./HomeHeader.svelte";
   import HomeSection01 from "./HomeSection01.svelte"
   import HomeSection1 from "./HomeSection1.svelte";
   import HomeSection2 from "./HomeSection2.svelte";
@@ -12,7 +12,6 @@
 <!-- MARKUP //////////////////////////////////////////////////// -->
 <main>
   <HomeHeader />
-  <HomeSection00 />
   <HomeSection01 />
   <HomeSection1 />
   <HomeSection2 />

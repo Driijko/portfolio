@@ -22,9 +22,9 @@
   // TRACKING  ------------------------------------------------
   function trackCurrentSnapPoint(snapPoint) {
     if (window.innerWidth < window.innerHeight) {
-      if (snapPoint > 2 && snapPoint < 5) {
+      if (snapPoint > 1 && snapPoint < 4) {
         overlayVisible = 1;
-      } else if (snapPoint > 4 && snapPoint < 8) {
+      } else if (snapPoint > 3 && snapPoint < 7) {
         overlayVisible = 2;
       } else {
         overlayVisible = 0;
