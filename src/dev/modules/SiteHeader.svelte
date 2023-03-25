@@ -49,12 +49,6 @@
           on:click|preventDefault={()=> pageExit("cv")}
         >CV</a>
       </li>
-      <li class:excluded={$currentPageName === "about"}>
-        <a href={null} 
-          class="interface-style2"
-          on:click|preventDefault={()=> pageExit("about")}
-        >About</a>
-      </li>
     </ul>
   </nav>
 

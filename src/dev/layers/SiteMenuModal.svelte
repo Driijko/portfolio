@@ -41,12 +41,6 @@
               on:click|preventDefault={()=> pageExit("cv", ()=> modals.close("siteMenu"))}
             >CV</a>
           </li>
-          <li class:excluded={$currentPageName === "about"}>
-            <a href={null} 
-              class="interface-style3 center"
-              on:click|preventDefault={()=> pageExit("about", ()=> modals.close("siteMenu"))}
-            >About</a>
-          </li>
         </ul>
       </nav>
 
