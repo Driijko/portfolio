@@ -25,11 +25,6 @@
           on:click|preventDefault={()=> pageExit("technology")}
         >Technology</a>
       </li>
-      <li class:excluded={$currentPageName === "hire"}>
-        <a href={null}  
-          on:click|preventDefault={()=> pageExit("hire")}
-        >Hire</a>
-      </li>
       <li class:excluded={$currentPageName === "cv"}>
         <a href={null}  
           on:click|preventDefault={()=> pageExit("cv")}

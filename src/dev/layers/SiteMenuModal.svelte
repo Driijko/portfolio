@@ -35,12 +35,6 @@
               on:click|preventDefault={()=> pageExit("technology", ()=> modals.close("siteMenu"))}
             >Technology</a>
           </li>
-          <li class:excluded={$currentPageName === "hire"}>
-            <a href={null} 
-              class="interface-style3 center"
-              on:click|preventDefault={()=> pageExit("hire", ()=> modals.close("siteMenu"))}
-            >Hire</a>
-          </li>
           <li class:excluded={$currentPageName === "cv"}>
             <a href={null} 
               class="interface-style3 center"

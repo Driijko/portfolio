@@ -43,15 +43,8 @@
           on:click|preventDefault={()=> pageExit("technology")}
         >Technology</a>
       </li>
-      <li class:excluded={$currentPageName === "hire"}>
-        <a href={null} 
-          class="interface-style2"
-          id="special"
-          on:click|preventDefault={()=> pageExit("hire")}
-        >Hire</a>
-      </li>
       <li class:excluded={$currentPageName === "cv"}>
-        <a href={null} 
+        <a href={null} id="special"
           class="interface-style2"
           on:click|preventDefault={()=> pageExit("cv")}
         >CV</a>

@@ -10,7 +10,6 @@
   import Portfolio from "./pages/Portfolio.svelte";
   import Technology from "./pages/Technology.svelte";
   import CVPage from "./pages/CVPage.svelte";
-  import HirePage from "./pages/HirePage.svelte";
   import AboutPage from "./pages/AboutPage.svelte";
 
   // RUN SCRIPTS ----------------------------------------------------
@@ -37,10 +36,6 @@
   {:else if $currentPageName === "technology"}
     {#key $resetCount}
       <Technology />
-    {/key}
-  {:else if $currentPageName === "hire"}
-    {#key $resetCount}
-      <HirePage />
     {/key}
   {:else if $currentPageName === "cv"}
     {#key $resetCount}
