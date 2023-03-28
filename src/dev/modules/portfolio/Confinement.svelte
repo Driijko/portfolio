@@ -11,7 +11,7 @@
   ]}
   genericDescriptor={"Art Exhibit & <br/>Workshop Series"}
   date={"2022"}
-  siteAddress={"confinementandcontagion.ca"}
+  siteAddress={"https://confinementandcontagion.ca"}
   pictureData={[
     "./portfolio/confinement-site-pic-portrait.webp",
     "./portfolio/confinement-site-pic-landscape.webp",

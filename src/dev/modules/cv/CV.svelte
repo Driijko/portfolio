@@ -43,7 +43,7 @@
 <div id="background">
   <header id="page-header">
     <h2>CV</h2>
-    <p><a id="download-link" href={"https://driijko.github.io/dreeko-dev/cv/cv.pdf"} download>Download pdf version</a></p>
+    <p><a id="download-link" href={"https://driijko.github.io/portfolio/cv/cv.pdf"} download target="_blank" rel="noopener noreferrer">Download pdf version</a></p>
   </header>
   <section id="cv">
 
